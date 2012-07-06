@@ -1228,9 +1228,9 @@ function changeUI(window) {
       tempArrow.style.backgroundImage = "rgba(255,255,255,0)";
       tempArrow.style.border = "1px solid rgba(255,255,255,0)";
       if (hiddenArrow == true)
-        tempArrow.setAttribute("value", "«");
+        tempArrow.setAttribute("value", "ï¿½");
       else if (hiddenArrow)
-        tempArrow.setAttribute("value", "»");
+        tempArrow.setAttribute("value", "ï¿½");
       else
         tempArrow.setAttribute("value", ">");
     }
@@ -2636,6 +2636,8 @@ function changeUI(window) {
       let UIEnhancerKeyset = window.document.createElementNS(XUL, "keyset");
       UIEnhancerKeyset.setAttribute("id", keysetID + "Helpers");
       // add shortcut key for going one level up
+      // Disregard that. Shortcuts removed. - Matt, 5/7/2012
+      /*
       let (upKey = window.document.createElementNS(XUL, "key")) {
         upKey.setAttribute("id", keyID + "LevelUP");
         upKey.setAttribute("keycode", "VK_UP");
@@ -2671,6 +2673,7 @@ function changeUI(window) {
         });
         $("mainKeyset").parentNode.appendChild(UIEnhancerKeyset).appendChild(previousKey);
       }
+      */
       unload(removeKey, window);
     }
 
